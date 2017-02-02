@@ -20,7 +20,7 @@ int main()
     {
         for(j=0;j<c;j++)
         {
-            if(a[i][j]==0)
+            if(a[i][j]==-1)
             {
                 ip=i;
                 jp=j;
