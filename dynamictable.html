@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<script>
+	function func()
+		{
+			var text ='<br/>';
+			var x = document.getElementById("num").value;
+			for(var i=1;i <= x;i++)
+			{
+				text += '<tr>';
+				for(var j=1;j <= x;j++)
+				{
+					text+='<td>'+j+'</td>'+' ';
+				}
+				text+='</tr>'+'<br/>';
+			}
+			document.getElementById("demo").innerHTML=text;
+		}
+</script>
+<body>
+	<input type="text"id="num"name="name"></input>
+	<button type="button" onclick="func()">Click Me</button>
+	<div id="demo"></div>
+</body>
+</html>
