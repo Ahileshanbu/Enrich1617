@@ -1,19 +1,28 @@
 <!doctype html>
+<head>
+<style>
+table,tr,td{
+	border: 2px solid blue;
+	border-collapse: collapse;
+}
+</style>
+</head>
 <html>
 <script>
 	function func()
 		{
-			var text ='<br/>';
+			var text ='<table>';
 			var x = document.getElementById("num").value;
 			for(var i=1;i <= x;i++)
 			{
 				text += '<tr>';
 				for(var j=1;j <= x;j++)
 				{
-					text+='<td>'+j+'</td>'+' ';
+					text+='<td>'+' '+j+' '+'</td>';
 				}
-				text+='</tr>'+'<br/>';
+				text+='</tr>';
 			}
+			text+='</table>';
 			document.getElementById("demo").innerHTML=text;
 		}
 </script>
