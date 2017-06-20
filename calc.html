@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<body>
+<table>
+	<tr>
+	<td colspan="3"><input type="text"id="out"></input></td>
+	</tr>
+	<tr>
+		<td><button type="button"id="bu1"value="1" onclick="func(this.value)">1</button></td>
+		<td><button type="button"id="bu2"value="2" onclick="func(this.value)">2</button></td>
+		<td><button type="button"id="bu3"value="3" onclick="func(this.value)">3</button></td>
+		<td><button type="button"id="buad"value="+" onclick="add()">+</button></td>
+	</tr>
+	<tr>
+		<td><button type="button"id="bu4"value="4" onclick="func(this.value)">4</button></td>
+		<td><button type="button"id="bu5"value="5" onclick="func(this.value)">5</button></td>
+		<td><button type="button"id="bu6"value="6" onclick="func(this.value)">6</button></td>
+		<td><button type="button"id="busu"value="-" onclick="sub()">-</button></td>
+	</tr>
+	<tr>
+		<td><button type="button"id="bu7"value="7" onclick="func(this.value)">7</button></td>
+		<td><button type="button"id="bu8"value="8" onclick="func(this.value)">8</button></td>
+		<td><button type="button"id="bu9"value="9" onclick="func(this.value)">9</button></td>
+		<td><button type="button"id="bumu"value="*" onclick="mul()">*</button></td>
+	</tr>
+	<tr>
+		<td><button type="button"id="bu0"value="0" onclick="func(this.value)">0</button></td>
+		<td><button type="button"id="bud"value="." onclick="func(this.value)">.</button></td>
+		<td><button type="button"id="bue"value="=" onclick="compute()">=</button></td>
+		<td><button type="button"id="budi"value="/" onclick="div()">/</button></td>
+	</tr>
+	<tr>
+	<td colspan="4"><button type="button"id="buac"onclick="res()">AC</button></td>
+	</tr>
+</table>
+<div id="demo">here</div>
+<script>
+	var xval=0,yval=0,t;
+	function func(x)
+	{
+		if(x == '.')
+		{
+			t = document.getElementById("out").value;
+			yval = t +'.';
+			document.getElementById("demo").innerHTML = yval;
+		}
+		else if(yval == 0)
+		{
+			yval = parseInt(x);
+			document.getElementById("out").value = yval;
+		}
+		else
+		{
+			yval = yval*10;
+			yval = parseInt(x)+yval;
+			document.getElementById("out").value = yval;
+		}
+		document.getElementById("demo").innerHTML = xval;
+		
+	}
+	function add()
+	{
+		xval = xval + yval;
+		document.getElementById("out").value = xval;
+		yval=0;
+	}
+	function sub()
+	{
+		xval = xval - yval;
+		document.getElementById("out").value = xval;
+		yval=0;
+	}
+	function mul()
+	{
+		xval = xval * yval;
+		document.getElementById("out").value = xval;
+		yval=0;
+	}
+	function div()
+	{
+		xval = (xval/yval);
+		document.getElementById("out").value = xval;
+		yval=0;
+	}
+	function compute()
+	{
+		document.getElementById("out").value = xval;
+	}
+	function res()	
+	{
+		xval=0;
+		yval=0;
+		document.getElementById("out").value = xval;
+	}
+</script>
+</body>
+</html>
