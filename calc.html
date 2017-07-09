@@ -11,7 +11,7 @@ table
 	{
 		width:10px;
 	}
-	input
+	button
 	{
 		width:100px;
 		height:100px;
@@ -21,38 +21,39 @@ table
 	{
 		font-size:35px;
 	}
-
-
 </style>
 </head>
 <body>
 	<div id="key" style="height:40px; width:410px; border:2px solid blue; text-align:center;"><br></div>
 	<table>
 		<tr>
-			<td><input type="button" value=1 onclick="nu(1)"></td>
-			<td><input type="button" value=2 onclick="nu(2)"></td>
-			<td><input type="button" value=3 onclick="nu(3)"></td>
-			<td><input type="button" value=+ onclick="op1('+')"></td>	
+			<td><button type="button" value=1 onclick="nu(1)">1</button></td>
+			<td><button type="button" value=2 onclick="nu(2)">2</button></td>
+			<td><button type="button" value=3 onclick="nu(3)">3</button></td>
+			<td><button type="button" value='/' onclick="op1('/')">/</button></td>
+				
 		</tr>
 		<tr>
-			<td><input type="button" value=4 onclick="nu(4)"></td>
-			<td><input type="button" value=5 onclick="nu(5)"></td>
-			<td><input type="button" value=6 onclick="nu(6)"></td>
-			<td><input type="button" value=- onclick="op1('-')"></td>	
+			<td><button type="button" value=4 onclick="nu(4)">4</button></td>
+			<td><button type="button" value=5 onclick="nu(5)">5</button></td>
+			<td><button type="button" value=6 onclick="nu(6)">6</button></td>
+			<td><button type="button" value=* onclick="op1('*')">*</button></td>	
 		</tr>
 		<tr>
-			<td><input type="button" value=7 onclick="nu(7)"></td>
-			<td><input type="button" value=8 onclick="nu(8)"></td>
-			<td><input type="button" value=9 onclick="nu(9)"></td>
-			<td><input type="button" value=* onclick="op1('*')"></td>	
+			<td><button type="button" value=7 onclick="nu(7)">7</button></td>
+			<td><button type="button" value=8 onclick="nu(8)">8</button></td>
+			<td><button type="button" value=9 onclick="nu(9)">9</button></td>
+			<td><button type="button" value=- onclick="op1('-')">-</button></td>
+			
 		</tr>
 		<tr>
-			<td><input type="button" value=0 onclick="nu(0)"></td>
-			<td><input type="button" value='.' onclick="fl('.')"></td>
-			<td><input type="button" value='=' onclick="eq()"></td>
-			<td><input type="button" value='/' onclick="op1('/')"></td>	
+			<td><button type="button" value='.' onclick="fl('.')">.</button></td>
+			<td><button type="button" value=0 onclick="nu(0)">0</button></td>
+			<td><button type="button" value='=' onclick="eq()">=</button></td>
+			<td><button type="button" value=+ onclick="op1('+')">+</button></td>
+				
 		</tr>
-			<tr><td colspan=4><input type="button" value="clear" onclick="clear()" style="width:410px; "></input></td></tr>
+			<tr><td colspan=4><button type="button"  onclick="clear()" style="width:410px; ">Clear</button></td></tr>
 	</table>
 <script>
 	var n1=0;
@@ -167,6 +168,7 @@ table
 		m=10;
 		n=1;
 		pointflag=0;
+		alert("hi");
 	}
 </script>
 </body>
