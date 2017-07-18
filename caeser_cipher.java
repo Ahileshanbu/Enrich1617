@@ -8,8 +8,10 @@ public class ceasor {
 	{
 		char str[];
 		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the plain text : ");
 		str = sc.nextLine().toCharArray();
 		int i,key;
+		System.out.print("Enter the key : ");
 		key = sc.nextInt();
 		for(i=0;i<str.length;i++)
 		{
@@ -34,7 +36,7 @@ public class ceasor {
 				str[i]=' ';
 			}
 		}
-		System.out.print("The Encypted data will be in the form : "+str);
+		System.out.println("The Encypted data will be in the form : "+new String(str));
 		for(i=0;i<str.length;i++)
 		{
 			if(Character.isUpperCase(str[i]))
