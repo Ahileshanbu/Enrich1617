@@ -1,0 +1,50 @@
+package sample;
+
+public class UserName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		java.util.Scanner sc = new java.util.Scanner( System.in);
+		
+		String str = sc.next();
+		
+		int len  = str.length();
+		
+		int i = 0;
+		
+		if(len<8||len>30)
+		{
+			System.out.println("Invalid");
+		}
+		else
+		{
+			if((str.charAt(0)>=65 && str.charAt(0)<=90)||(str.charAt(0)>=97&&str.charAt(0)<=122))
+			{
+				for(i =1;i<len;i++)
+				{
+					if((str.charAt(i)>=65 && str.charAt(i)<=90)||(str.charAt(i)>=97&&str.charAt(i)<=122)||(str.charAt(i)==95)||(str.charAt(i)>=48&&str.charAt(i)<=57))
+					{
+						continue;
+					}
+					else
+					{
+						System.out.println("Invalid");
+						break;
+					}
+				}
+			}
+			else
+			{
+				System.out.println("Invalid");
+			}
+		}
+		if(i==len)
+		{
+			System.out.println("Valid");
+		}
+		sc.close();
+
+	}
+
+}
